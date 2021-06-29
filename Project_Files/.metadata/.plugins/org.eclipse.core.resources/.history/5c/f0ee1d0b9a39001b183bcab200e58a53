@@ -1,0 +1,11 @@
+package se.computation;
+
+public class StudentSummary 
+{
+	int totalrequest;
+	int 
+	StudentSummary()
+	{
+		
+	}
+}

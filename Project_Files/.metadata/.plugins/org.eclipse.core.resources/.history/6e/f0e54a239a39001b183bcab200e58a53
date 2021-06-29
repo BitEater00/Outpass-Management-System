@@ -1,0 +1,13 @@
+package se.computation;
+
+public class StudentSummary 
+{
+	int totalrequest;
+	int activerequest;
+	int approved;
+	int rejected;
+	StudentSummary(String id)
+	{
+		
+	}
+}

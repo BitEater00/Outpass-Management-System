@@ -1,0 +1,18 @@
+package se.computation;
+
+import se.request.Request;
+
+public class StudentSummary 
+{
+	int totalrequest;
+	int activerequest;
+	int approved;
+	int rejected;
+	Request obj = new Request();
+	StudentSummary(String id)
+	{
+		senddata(id);
+	}
+	
+	private void 
+}

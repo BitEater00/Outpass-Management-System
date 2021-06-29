@@ -1,0 +1,86 @@
+package se.menu;
+import java.awt.Color;
+import java.awt.Dimension;
+import java.awt.GridLayout;
+
+import javax.swing.BorderFactory;
+import javax.swing.BoxLayout;
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JPanel;
+import javax.swing.JScrollPane;
+import javax.swing.ScrollPaneLayout;
+import javax.swing.border.LineBorder;
+
+public class MainGrid {
+
+    public static JPanel addPanel(int count) {
+        JPanel newPanel = new JPanel();
+        newPanel.setLayout(new GridLayout(1, 5));
+        JButton jb1 = new JButton("Button 1" + count);
+        jb1.setSize(200, 10);
+        newPanel.add(jb1);
+        JButton jb2 = new JButton("Button 2" + count);
+        jb2.setSize(200, 10);
+        newPanel.add(jb2);
+        JButton jb3 = new JButton("Button 3" + count);
+        jb3.setSize(200, 10);
+        newPanel.add(jb3);
+        JButton jb4 = new JButton("Button 4" + count);
+        jb4.setSize(200, 10);
+        newPanel.add(jb4);
+        JButton jb5 = new JButton("Button 5" + count);
+        jb5.setSize(200, 10);
+        newPanel.add(jb5);
+        newPanel.setBorder(new LineBorder(Color.black, 2));
+        newPanel.setVisible(true);
+        return newPanel;
+    }
+
+    public static void main(String[] args) {
+        JFrame.setDefaultLookAndFeelDecorated(true);
+        JFrame frame = new JFrame("BoxLayout Test");
+        JPanel mainPanel = new JPanel();
+        mainPanel.setLayout(new BoxLayout(mainPanel, BoxLayout.PAGE_AXIS));
+        frame.setDefaultCloseOperation(JFrame.EXIT_ON_CLOSE);
+        JScrollPane scrollPane = new JScrollPane(mainPanel);
+        scrollPane.setHorizontalScrollBarPolicy(JScrollPane.HORIZONTAL_SCROLLBAR_ALWAYS);
+        scrollPane.setVerticalScrollBarPolicy(JScrollPane.VERTICAL_SCROLLBAR_ALWAYS);
+        scrollPane.setLayout(new ScrollPaneLayout());
+        mainPanel.add(addPanel(1));
+        mainPanel.add(addPanel(2));
+        mainPanel.add(addPanel(3));
+        mainPanel.add(addPanel(4));
+        mainPanel.add(addPanel(5));
+        mainPanel.add(addPanel(6));
+        mainPanel.add(addPanel(7));
+        mainPanel.add(addPanel(8));
+        mainPanel.add(addPanel(9));
+        mainPanel.add(addPanel(10));
+        mainPanel.add(addPanel(11));
+        mainPanel.add(addPanel(12));
+        mainPanel.add(addPanel(13));
+        mainPanel.add(addPanel(14));
+        mainPanel.add(addPanel(15));
+        mainPanel.add(addPanel(1));
+        mainPanel.add(addPanel(2));
+        mainPanel.add(addPanel(3));
+        mainPanel.add(addPanel(4));
+        mainPanel.add(addPanel(5));
+        mainPanel.add(addPanel(6));
+        mainPanel.add(addPanel(7));
+        mainPanel.add(addPanel(8));
+        mainPanel.add(addPanel(9));
+        mainPanel.add(addPanel(10));
+        mainPanel.add(addPanel(11));
+        mainPanel.add(addPanel(12));
+        mainPanel.add(addPanel(13));
+        mainPanel.add(addPanel(14));
+        mainPanel.add(addPanel(15));
+        scrollPane.setViewportBorder(
+                BorderFactory.createLineBorder(Color.red));
+        frame.add(scrollPane);
+        frame.pack();
+        frame.setVisible(true);
+    }
+}

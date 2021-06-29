@@ -1,0 +1,82 @@
+package se.computation;
+
+import java.awt.Color;
+import java.awt.event.ActionEvent;
+import java.awt.event.ActionListener;
+
+import javax.swing.JButton;
+import javax.swing.JFrame;
+import javax.swing.JLabel;
+import javax.swing.JOptionPane;
+import javax.swing.JPanel;
+import se.Student.Student;
+import se.Student.StudentData;
+
+
+public class ProfileGenerator extends JFrame 
+{
+	StudentData data;
+	Student Sobj;
+	JPanel sidepanel;
+	JPanel mainpanel;
+	JPanel summary;
+	JPanel profile;
+	
+	ProfileGenerator(String id)
+	{
+		Sobj = new Student();
+		data = Sobj.getStudentById(id);
+		setSize(1030,550);
+		addSidePanel());
+		addmainpanel();
+	}
+	
+	private void addSidePanel()
+	{
+		JPanel sidepanel = new JPanel();
+		JLabel menuname = new JLabel("Student Profile");
+		menuname.setForeground(Color.white);
+		menuname.setBounds(50,0,200,50);
+		
+		JButton Summary = new JButton("Summary");
+		Summary.setBounds(0,200,200,30);
+		Summary.setBackground(Color.WHITE);
+		Summary.setForeground(Color.BLACK);
+		Summary.addActionListener(new MenuButton());
+		
+		JButton Profile = new JButton("Profile");
+		Profile.setBounds(0,300,200,30);
+		Profile.setBackground(Color.WHITE);
+		Profile.setForeground(Color.BLACK);
+		Profile.addActionListener(new MenuButton());
+		
+		JButton logout = new JButton("Exit");
+		logout.setBounds(0,350,200,30);
+		logout.setBackground(Color.WHITE);
+		logout.setForeground(Color.BLACK);
+		logout.addActionListener(new ActionListener()
+				{
+					public void actionPerformed(ActionEvent arg0) 
+					{
+						int result = JOptionPane.showConfirmDialog(sidepanel,"Sure? You want to exit?", "Swing Tester",
+					               JOptionPane.YES_NO_OPTION,
+					               JOptionPane.QUESTION_MESSAGE);
+						if(result == JOptionPane.YES_OPTION) 
+						{
+							JFrame del = (JFrame)sidepanel.getParent().getParent().getParent().getParent();
+							del.dispose();
+					    }
+					}
+					
+				});
+		sidepanel.add(logout);
+		sidepanel.add(Summary);
+		sidepanel.add(menuname);
+		sidepanel.add(Profile);
+		
+		sidepanel.setBounds(0, 0,200,500);
+		sidepanel.setBackground(new Color(39,39,39));
+		sidepanel.setLayout(null);
+		this.add(sidepanel);
+	}
+}

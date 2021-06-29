@@ -1,0 +1,106 @@
+
+public class runner {
+	public static void main(String args[])
+	{
+		Warden Wobj = new Warden();
+		WardenData data1 = Wobj.getWardenById("EHW2019"); 
+		Mentor Mobj = new Mentor();
+		MentorData data2 = Mobj.getMentorById("EM7812");
+		Student obj=new Student();
+		StudentData data=new StudentData();
+		data.Name="qwerty";
+		data.Id="17BCN9087";
+		data.Email="qwerty.17BCN9087@vitap.ac.in";
+		data.gender="F";
+		data.HostelName = "LH1";
+		data.RoomNumber=123;
+		data.status=1;
+		data.late=4;
+		data.MentorDetails=data2;
+		data.WardenData = data1;
+		System.out.println(obj.addStudent(data,"asdf1234"));
+	}
+}
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Student obj=new Student();
+		StudentData data=obj.getStudentById("18BFC2020");
+		System.out.println(data.Name);
+	}
+}
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Student obj=new Student();
+		System.out.println(obj.updatePassword("18BFC2020","12adzc"));
+	}
+}
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Student obj=new Student();
+		System.out.println(obj.checkId("18BFC2020"));
+	}
+}
+
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Student obj=new Student();
+		System.out.println(obj.getPassword("18BFC2020"));
+	}
+}
+
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Student obj=new Student();
+		System.out.println(obj.updateMentor("18BFC2020","asd123"));
+	}
+}
+
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Student obj=new Student();
+		System.out.println(obj.updateHostel("18BFC2020","MH2"));
+	}
+}
+
+
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Student obj=new Student();
+		System.out.println(obj.updatetimeslate("18BFC2020"));
+	}
+}

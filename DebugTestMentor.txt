@@ -1,0 +1,45 @@
+
+public class runner {
+	public static void main(String args[])
+	{
+		Mentor obj=new Mentor();
+        	MentorData data=new MentorData();
+        	data.name = "abcd";
+        	data.EmployeeId = "EM1002";
+        	data.Emailid= "ab1@b.com";
+        	System.out.println(obj.addMentor(data,"1234"));
+		
+	}
+}
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Mentor obj=new Mentor();
+        MentorData data=new MentorData();
+        data=obj.getMentorById("EM7812");
+        System.out.println(data.name);
+		
+	}
+}
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+	        Mentor obj=new Mentor();
+        	System.out.println(obj.updateMentorPassword("EM1002","ABC123"));
+	}
+}
+
+
+public class runner {
+	public static void main(String args[])
+	{
+	        Mentor obj=new Mentor();
+		System.out.println(obj.deleteMentor("EM7812"));	
+	}
+}

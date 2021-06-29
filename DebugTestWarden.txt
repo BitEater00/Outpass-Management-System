@@ -1,0 +1,69 @@
+
+public class runner {
+	public static void main(String args[])
+	{
+		Warden obj=new Warden();
+		WardenData data=new WardenData();
+		data.name="EHWABCDE";
+		data.EmployeeId ="123dsc";
+		data.Emailid ="abc@123490.com";
+		data.HostelId ="LH1";
+		System.out.println(obj.addWarden(data,"a1b2"));	
+	}
+}
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Warden obj=new Warden();
+		WardenData data=obj.getWardenById("EHW2062");
+		System.out.println(data.name);
+	}
+}
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Warden obj=new Warden();
+		WardenData data=obj.getWardenByHostelId("MH2");
+		System.out.println(data.name);
+	}
+}
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Warden obj=new Warden();
+		System.out.println(obj.updateWardenPassword("123dsc","zxc34"));
+	}
+}
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Warden obj=new Warden();
+		System.out.println(obj.updateWardenHostelId("EHW2019","LH1"));
+	}
+}
+
+
+
+
+public class runner {
+	public static void main(String args[])
+	{
+		Warden obj=new Warden();
+		System.out.println(obj.deleteMentor("123dsc"));
+	}
+}
